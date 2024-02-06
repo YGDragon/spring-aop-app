@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    # PostgresQL
+    url: jdbc:postgresql://localhost:5432/db-notes
+    driverClassName: org.postgresql.Driver
+    username: root
+    password: password
+    # default connection pool
+    hikari:
+      connectionTimeout=20000
+      maximumPoolSize=5
+  # update, good for testing, production set to none or comment it
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+
